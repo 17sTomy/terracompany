@@ -1,0 +1,343 @@
+:root {
+  --color1: rgba(42, 20, 20, .7);
+  --color2: rgba(24, 112, 15, .4);
+  --color3: rgba(0, 0, 0, .9);
+  --fondo: #f2f2f2;
+  --titulos: 33px;
+  --subtitulos: 18px;
+  --margenes: 60px;
+  --espacios: 10px;
+  --espacios-contenido: 45px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: var(--fondo);
+  scroll-behavior: smooth;
+}
+
+img {
+  vertical-align: top;
+}
+
+/***************************HEADER*********************************/
+
+header {
+  width: 100%;
+  height: 600px;
+  background: linear-gradient(to bottom, rgba(42, 20, 20, .7), rgba(24, 112, 15, .4), rgba(0, 0, 0, .9)), url("img/header2.jfif") no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+}
+
+.nav1 {
+  background: transparent;
+  height: 80px;
+}
+
+.contenedor-nav {
+  display: flex;
+  margin: auto;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  height: inherit;
+  overflow: hidden;
+}
+
+nav .enlaces a {
+  display: inline-block;
+  padding: 5px 0;
+  margin-right: 17px;
+  font-size: 17px;
+  font-weight: 300;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  color: #fff;
+}
+
+nav .enlaces a:hover {
+  border-bottom: 3px solid rgba(43, 182, 14, .4);
+  transition: .6s;
+}
+
+.logo img {
+  height: 100px;
+  padding: 0px;
+}
+
+.icono {
+  display: none;
+  font-size: 24px;
+  padding: 23.5px 20px;
+}
+
+.textos {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.textos h1 {
+  font-size: 80px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.textos h2 {
+  font-size: 30px;
+  font-weight: normal;
+}
+
+/*******************************MAIN********************************************/
+
+.contenedor {
+  margin: auto;
+  padding: var(--margenes);
+  width: 90%;
+  max-width: 1500px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.contenedor h3 {
+  font-size: var(--titulos);
+  color: var(--color1);
+  margin-bottom: var(--espacios);
+}
+
+.contenedor p {
+  font-size: var(--subtitulos);
+  font-weight: 300;
+  color: var(--color1);
+}
+
+.after::after {
+  content: "";
+  display: block;
+  margin: auto;
+  margin-top: var(--espacios);
+  width: 100px;
+  height: 2px;
+  background: var(--color1);
+  margin-bottom: var(--espacios-contenido);
+}
+
+/*******************************************CARDS*****************************************************/
+
+.card {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.content-card {
+  width: 31%;
+  box-shadow: 1px 0 6px 0 rgba(0, 0, 0, .5);
+  overflow: hidden;
+  height: 400px;
+  margin: 50px;
+}
+
+.people {
+  height: 80%;
+}
+
+.content-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.texto-team {
+  height: 20%;
+  width: 100%;
+  padding: var(--espacios);
+}
+
+.about {
+  background: url("img/teclado3.jpg");
+  height: auto;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+/*******************************************NUESTROS SERVICIOS*****************************************************/
+
+.servicios {
+  display: flex;
+  color: #fff;
+  justify-content: space-around;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.caja-servicios {
+  padding: 0 5px 10px 5px;
+}
+
+.caja-servicios h4 {
+  margin-bottom: var(--espacios);
+}
+
+.caja-servicios p {
+  text-align: center;
+}
+
+/*******************************************NUESTRO TRABAJO*****************************************************/
+
+.botones-work {
+  overflow: hidden;
+}
+
+.botones-work li {
+  display: inline-block;
+  text-align: center;
+  margin-left: var(--espacios);
+  margin-bottom: var(--espacios-contenido);
+  padding: 6px 12px;
+  border: 1px solid var(--color1);
+  list-style: none;
+  color: var(--color1);
+  border-radius: 25px;
+  transition: background-color .5s;
+}
+
+.botones-work li:hover {
+  background-color: var(--color1);
+  color: #fff;
+  cursor: pointer;
+}
+
+.botones-work .active {
+  background-color: var(--color1);
+  color: #fff;
+}
+
+.galeria-work {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.galeria-work .cont-work {
+  width: 31%;
+  box-shadow: 1px 0 6px 0 rgba(0, 0, 0, .5);
+  height: 400px;
+  overflow: hidden;
+  margin-bottom: var(--espacios-contenido);
+}
+
+.img-work {
+  height: 75%;
+  width: 100%;
+}
+
+.img-work img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.textos-work {
+  height: 25%;
+}
+
+.textos-work h4 {
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.textos-work a{
+  color: rgba(42, 20, 20);
+  background-color: var(--color2);
+  border: 2px solid none;
+  border-radius: 35px;
+  padding: 3px;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: all .5s;
+}
+
+.textos-work a:hover{
+  text-decoration: underline;
+  background-color: rgba(42, 20, 20);
+  color: white;
+  padding: 5px;
+  border: 2px solid white;
+}
+
+/*************************************************FOOTER*****************************************************************/
+
+footer {
+  background: linear-gradient(to bottom, rgba(42, 20, 20, .7), rgba(24, 112, 15, .4), rgba(0, 0, 0, .9)), url("img/footer.jfif") no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.marca-logo {
+  width: 40%;
+  margin: auto;
+  margin-bottom: var(--espacios);
+  display: flex;
+  justify-content: center;
+}
+
+.marca-logo img {
+  width: 200px;
+  height: 200px;
+}
+
+.iconos {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.fab {
+  font-size: 60px;
+  color: #fff;
+  margin-bottom: var(--espacios);
+  transition: transform .4s;
+  cursor: pointer;
+}
+
+.fab:hover {
+  transform: scale(1.1);
+}
+
+.footer p {
+  color: #fff;
+  margin-top: var(--espacios);
+}
+
+/*---------------contacto------------------------*/
+
+.info {
+  height: 850px;
+}
+
+.extra {
+  color: var(--color1);
+}
